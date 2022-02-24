@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+body {
+  font-family: Roboto;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+.icon {
+  filter: invert(100%) sepia(0%) saturate(7495%) hue-rotate(321deg)
+    brightness(100%) contrast(100%);
+  width: 17px;
+}
+
+.black-icon {
+  filter: invert(0%) sepia(26%) saturate(3014%) hue-rotate(199deg)
+    brightness(103%) contrast(107%);
+}
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  background-color: #e2e8f0;
+}
+.header {
+  background-color: white;
+  grid-column-start: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.search-notification,
+.user-status {
+  display: grid;
+  padding: 10px 50px;
+  padding-right: 50px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.search-notification form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search-notification form input[type="search"] {
+  width: 100%;
+  border: none;
+  background-color: #e2e8f0;
+  padding: 5px 20px;
+  border-radius: 10px;
+  outline: none;
+}
+.notification {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+.avatar {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.avatar img,
+.user-info img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+.user-info img {
+  width: 55px;
+}
+.search-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+.user-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.user-name p:last-child {
+  font-weight: 700;
+}
+.user-name p:first-child {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.user-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.user-buttons button {
+  background-color: #3b82f6;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  padding: 8px 24px;
+  cursor: pointer;
+}
+.sidebar {
+  background-color: #3b82f6;
+  grid-row: 1/6;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+  gap: 30px;
+}
+.brand {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.brand .icon {
+  width: 30px;
+}
+
+.navbar ul,
+.control ul {
+  padding-left: 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.control {
+  align-self: start;
+}
+.navbar ul a,
+.control ul a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+.main {
+  grid-column-start: 2;
+  grid-row: 2/6;
+  padding: 10px 30px;
+  padding-top: 20px;
+  background-color: #e2e8f0;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.projects-container {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.projects .card {
+  background-color: white;
+  border-radius: 7px;
+  border-left: 5px solid #fbbf24;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.projects .card .card-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgb(97, 97, 97);
+}
+.projects .card div:last-child {
+  margin-top: auto;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.announcements,
+.trendings {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.announcements div {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.announcements div p {
+  font-size: 14px;
+  color: rgb(97, 97, 97);
+}
+.t-avatar {
+  display: flex;
+  gap: 15px;
+}
+
+.t-avatar-text p:last-child {
+  font-size: 14px;
+  color: rgb(97, 97, 97);
+}
+.t-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+h4 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
