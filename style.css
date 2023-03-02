@@ -133,14 +133,20 @@ body {
 .top-sidebar {
   margin-top: 50px;
 }
-.top-sidebar ul {
+.top-sidebar ul,
+.bottom-sidebar ul {
   list-style: none;
 }
-.top-sidebar ul li {
+.top-sidebar ul li,
+.bottom-sidebar ul li {
   font-size: 17px;
   font-weight: 600;
   margin-top: 20px;
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.bottom-sidebar {
+  margin-top: 60px;
 }
