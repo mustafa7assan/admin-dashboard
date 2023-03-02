@@ -20,11 +20,13 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(5, 1fr);
   background-color: rgb(61, 59, 59);
 }
 .header {
   background-color: #fff;
   padding: 20px 30px;
+  border-bottom: 3px solid #d0d6dd;
 }
 .top-header {
   display: grid;
@@ -50,18 +52,66 @@ body {
   align-items: center;
   gap: 20px;
 }
+
 .avatar-1-img {
   height: 30px;
+}
+.avatar-2-img {
+  height: 50px;
+}
+.avatar-1-img,
+.avatar-2-img {
   width: auto;
   border-radius: 50%;
+}
+.bottom-header {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
 }
 .avatar-1-text {
   font-weight: 600;
 }
+
+.avatar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.avatar-text p:first-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.avatar-text p:last-child {
+  font-weight: 600;
+  margin-top: 5px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.controls button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 25px;
+  background-color: #1992d4;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+
 .main {
   background-color: #ddd;
+  grid-row: 2/6;
 }
 .sidebar {
-  grid-row: 1/3;
+  grid-row: 1/6;
   background-color: #1992d4;
 }
