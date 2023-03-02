@@ -114,4 +114,33 @@ body {
 .sidebar {
   grid-row: 1/6;
   background-color: #1992d4;
+  padding: 20px 20px;
+  color: #fff;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.logo-icon {
+  height: 40px;
+  fill: #fff;
+}
+.top-sidebar {
+  margin-top: 50px;
+}
+.top-sidebar ul {
+  list-style: none;
+}
+.top-sidebar ul li {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
