@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --main-bg-color: #f43f5e;
+}
 html,
 body {
   width: 100%;
@@ -101,19 +104,15 @@ body {
   font-size: 14px;
   font-weight: 600;
   padding: 10px 25px;
-  background-color: #1992d4;
+  background-color: var(--main-bg-color);
   border-radius: 25px;
   color: white;
   cursor: pointer;
 }
 
-.main {
-  background-color: #ddd;
-  grid-row: 2/6;
-}
 .sidebar {
   grid-row: 1/6;
-  background-color: #1992d4;
+  background-color: var(--main-bg-color);
   padding: 20px 20px;
   color: #fff;
 }
@@ -149,4 +148,79 @@ body {
 
 .bottom-sidebar {
   margin-top: 60px;
+}
+
+.main {
+  background-color: #dde3ea;
+  grid-row: 2/6;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+.projects-section {
+  grid-row: 1/3;
+}
+.projects {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.project-card {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-radius: 5px;
+  border-left: 6px solid #f52245;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.project-card-text {
+  color: rgb(59, 59, 59);
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.project-card-icons {
+  align-self: flex-end;
+  margin-top: auto;
+  display: flex;
+  gap: 20px;
+}
+.announcements,
+.trending {
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  background-color: white;
+}
+.announcements .card p {
+  color: rgb(59, 59, 59);
+  text-align: justify;
+  font-size: 14px;
+}
+.announcements .card {
+  padding: 10px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.announcements .card:last-child {
+  border-bottom: none;
+}
+.trending .card {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.trending .card p:first-child {
+  color: rgb(20, 20, 20);
+  font-size: 12px;
+}
+.trending .card p:last-child {
+  color: rgb(85, 85, 85);
+  margin-top: 3px;
+  font-size: 13px;
 }
